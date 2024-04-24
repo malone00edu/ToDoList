@@ -2,7 +2,7 @@
 
     Needed:
     
-        Adding location based notifications for active to dos. 
+        Adding location based notifications for active to do tasks. 
         
         Ability to modify active to do tasks within the app.
         
