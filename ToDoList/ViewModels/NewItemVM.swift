@@ -7,15 +7,60 @@
 import FirebaseAuth // Import FirebaseAuth for user authentication services.
 import FirebaseFirestore // Import FirebaseFirestore to interact with Firestore database.
 import Foundation // Import Foundation for basic functionality.
+import MapKit
 
 // Define NewItemVM class conforming to ObservableObject to allow UI updates.
-class NewItemVM: ObservableObject {
+class NewItemVM: NSObject, ObservableObject, MKLocalSearchCompleterDelegate {
     @Published var title = "" // Observable property for the title of the new to-do item.
+    @Published var location = "" // Observable property for the location of the to-do item.
+    @Published var locationResults: [MKLocalSearchCompletion] = []
+    private var locationCompleter: MKLocalSearchCompleter
+    @Published var selectedOptions: Set<String> = [] // Observable property for the current selection of days.
+    @Published var isExpanded: Bool = false // Obervable property for the current status of a collapsible list.
+    let options = ["Every Sunday", "Every Monday", "Every Tuesday", "Every Wednesday", "Every Thursday", "Every Friday", "Every Saturday"]
     @Published var dueDate = Date() // Observable property for the due date of the new to-do item.
     @Published var showAlert = false // Observable property to control the alert presentation.
     
     // Empty initializer for the class.
-    init() {}
+    override init() {
+        locationCompleter = MKLocalSearchCompleter()
+        super.init()
+        locationCompleter.delegate = self
+        locationCompleter.resultTypes = .address
+    }
+    
+    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
+        DispatchQueue.main.async {
+            self.locationResults = completer.results
+        }
+    }
+    
+    func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: any Error) {
+        // Handle the error
+    }
+    
+    func onSearchTextChanged(_ query: String) {
+        locationCompleter.queryFragment = query
+    }
+    
+    // Function to clear the location search results
+    func clearLocationResults() {
+        locationResults = []
+    }
+    
+    // Function to handle day(s) selection
+    func selectOption(_ option: String) {
+        if selectedOptions.contains(option) {
+            selectedOptions.remove(option)
+        } else {
+            selectedOptions.insert(option)
+        }
+    }
+    
+    // Function to handle collapse selection
+    func toggleDisclosure() {
+        isExpanded.toggle()
+    }
     
     // Function to save a new to-do item.
     func save() {
