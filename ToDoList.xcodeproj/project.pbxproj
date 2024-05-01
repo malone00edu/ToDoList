@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF141FF32BE27C1900A46A44 /* CustomFormHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */; };
 		FF23F2DA2BD7A83B00EF3EDF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF23F2D92BD7A83B00EF3EDF /* Launch Screen.storyboard */; };
 		FF29D1732BCE3FD700B4E289 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29D1722BCE3FD700B4E289 /* HeaderView.swift */; };
 		FF4B9BE12BCF26DF00AF8814 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormHeader.swift; sourceTree = "<group>"; };
 		FF23F2D92BD7A83B00EF3EDF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FF29D1722BCE3FD700B4E289 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				FFEEBA272BB9126C00FCBBE4 /* ToDoListView.swift */,
 				FF29D1722BCE3FD700B4E289 /* HeaderView.swift */,
 				FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */,
+				FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */,
 			);
 			name = Views;
 			path = ToDoList/Views;
@@ -266,6 +269,7 @@
 				FFEEBA302BB9126C00FCBBE4 /* RegisterVM.swift in Sources */,
 				FFEEBA362BB9126C00FCBBE4 /* LoginView.swift in Sources */,
 				FFEEBA352BB9126C00FCBBE4 /* User.swift in Sources */,
+				FF141FF32BE27C1900A46A44 /* CustomFormHeader.swift in Sources */,
 				FFEEBA3C2BB9126C00FCBBE4 /* ToDoListItemView.swift in Sources */,
 				FFEEBA3A2BB9126C00FCBBE4 /* ProfileView.swift in Sources */,
 				FFEEBA342BB9126C00FCBBE4 /* ToDoListItem.swift in Sources */,
