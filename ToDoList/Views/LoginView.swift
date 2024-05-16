@@ -17,7 +17,7 @@ struct LoginView: View {
             // Use a VStack to arrange subviews vertically.
             VStack {
                 // Header component of the login view.
-                HeaderView(title: "To Do List",
+                MainHeaderView(title: "To Do List",
                            subtitle: "Get things done",
                            angle: 15,
                            foreground: .pink)

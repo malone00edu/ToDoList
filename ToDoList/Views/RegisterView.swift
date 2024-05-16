@@ -13,7 +13,7 @@ struct RegisterView: View {
     // The body property represents the view's content.
     var body: some View {
         // Header component of the register view.
-        HeaderView(title: "Register",
+        MainHeaderView(title: "Register",
                    subtitle: "Start organizing todos",
                    angle: -15, // Set the angle for the header view's appearance.
                    foreground: .orange) // Set the foreground color to orange.

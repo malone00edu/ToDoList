@@ -17,11 +17,13 @@ struct NewItemView: View {
     var body: some View {
         // Use a VStack to arrange subviews vertically.
         VStack {
+            BasicHeaderView(title: "Create a new task")
             // Form for the new item input fields.
             Form {
                 // Text field for the new item's title.
-                Section(header: CustomFormHeader(title: "Create a task")) {
+                Section {
                     TextField("Title", text: $viewModel.title)
+                        .font(.system(size: 16))
                         .focused($isTitleFieldFocused)
                         .onChange(of: isTitleFieldFocused) { _, newValue in
                             if newValue { // This textfield is currently focused.
@@ -32,6 +34,7 @@ struct NewItemView: View {
                     
                     // Text field for the new item's location (optional).
                     TextField("Location (Optional)", text: $viewModel.location)
+                        .font(.system(size: 16))
                         .focused($isLocationFieldFocused)
                         .onChange(of: viewModel.location, initial: true) {_, newValue in
                             viewModel.onSearchTextChanged(newValue)
@@ -56,17 +59,32 @@ struct NewItemView: View {
                 }
                 
                 Section {
-                    // List of days. None is selected by default.
-                    List {
-                        DisclosureGroup("Repeat this task", isExpanded: $viewModel.isExpanded) { // List is collapsed by default.
-                            ForEach(viewModel.options, id: \.self) { option in
-                                Toggle(isOn: Binding(
-                                    get: {viewModel.selectedOptions.contains(option)},
-                                    set: {_ in viewModel.selectOption(option)})) {
+                    List { // List of days. None is selected by default.
+                        DisclosureGroup(
+                            isExpanded: $viewModel.isExpanded,
+                            content: { // List is collapsed by default.
+                                ForEach(viewModel.options, id: \.self) { option in
+                                    Toggle(isOn: Binding(
+                                        get: {viewModel.selectedOptions.contains(option) },
+                                        set: {_ in viewModel.selectOption(option) }
+                                    )) {
                                         Text(option)
+                                            .font(.system(size: 15))
+                                            .bold()
                                     }
+                                }
+                            }, label: {
+                                HStack {
+                                    Text("Repeat")
+                                        .font(.system(size: 15))
+                                        .bold()
+                                    Spacer()
+                                    Text(viewModel.selectedOptionsLabel)
+                                        .font(.system(size: 15))
+                                        .foregroundColor(Color(.secondaryLabel))
+                                }
                             }
-                        }
+                        )
                     }
                     .onAppear {
                         viewModel.isExpanded = false
@@ -111,9 +129,9 @@ struct NewItemView: View {
                     }
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading) // Stretch the form to fill the VStack.
-            .offset(y: -30)
-            .edgesIgnoringSafeArea(.all)
+            //.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading) // Stretch the form to fill the VStack.
+            //.offset(y: -30)
+            //.edgesIgnoringSafeArea(.all)
             .simultaneousGesture(DragGesture().onChanged({_ in
                 hideKeyboard()
             })) // Dectect when user starts scrolling.

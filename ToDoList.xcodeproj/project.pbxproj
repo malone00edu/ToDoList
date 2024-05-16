@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF141FF32BE27C1900A46A44 /* CustomFormHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */; };
+		FF141FF32BE27C1900A46A44 /* BasicHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF141FF22BE27C1900A46A44 /* BasicHeaderView.swift */; };
 		FF23F2DA2BD7A83B00EF3EDF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF23F2D92BD7A83B00EF3EDF /* Launch Screen.storyboard */; };
-		FF29D1732BCE3FD700B4E289 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29D1722BCE3FD700B4E289 /* HeaderView.swift */; };
+		FF29D1732BCE3FD700B4E289 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29D1722BCE3FD700B4E289 /* MainHeaderView.swift */; };
 		FF4B9BE12BCF26DF00AF8814 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */; };
 		FF672E162BCF8014008AEF32 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = FF672E152BCF8014008AEF32 /* Extensions .swift */; };
 		FFEEBA292BB9126C00FCBBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEEBA0F2BB9126C00FCBBE4 /* Assets.xcassets */; };
@@ -38,9 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormHeader.swift; sourceTree = "<group>"; };
+		FF141FF22BE27C1900A46A44 /* BasicHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicHeaderView.swift; sourceTree = "<group>"; };
 		FF23F2D92BD7A83B00EF3EDF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FF29D1722BCE3FD700B4E289 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FF29D1722BCE3FD700B4E289 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		FF672E152BCF8014008AEF32 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		FFEEB9FC2BB9110900FCBBE4 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,9 +164,9 @@
 				FFEEBA252BB9126C00FCBBE4 /* RegisterView.swift */,
 				FFEEBA262BB9126C00FCBBE4 /* ToDoListItemView.swift */,
 				FFEEBA272BB9126C00FCBBE4 /* ToDoListView.swift */,
-				FF29D1722BCE3FD700B4E289 /* HeaderView.swift */,
+				FF29D1722BCE3FD700B4E289 /* MainHeaderView.swift */,
 				FF4B9BE02BCF26DF00AF8814 /* TLButton.swift */,
-				FF141FF22BE27C1900A46A44 /* CustomFormHeader.swift */,
+				FF141FF22BE27C1900A46A44 /* BasicHeaderView.swift */,
 			);
 			name = Views;
 			path = ToDoList/Views;
@@ -253,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFEEBA3D2BB9126C00FCBBE4 /* ToDoListView.swift in Sources */,
-				FF29D1732BCE3FD700B4E289 /* HeaderView.swift in Sources */,
+				FF29D1732BCE3FD700B4E289 /* MainHeaderView.swift in Sources */,
 				FFEEBA392BB9126C00FCBBE4 /* NewItemView.swift in Sources */,
 				FFEEBA322BB9126C00FCBBE4 /* ToDoListVM.swift in Sources */,
 				FFEEBA382BB9126C00FCBBE4 /* MainView.swift in Sources */,
@@ -269,7 +269,7 @@
 				FFEEBA302BB9126C00FCBBE4 /* RegisterVM.swift in Sources */,
 				FFEEBA362BB9126C00FCBBE4 /* LoginView.swift in Sources */,
 				FFEEBA352BB9126C00FCBBE4 /* User.swift in Sources */,
-				FF141FF32BE27C1900A46A44 /* CustomFormHeader.swift in Sources */,
+				FF141FF32BE27C1900A46A44 /* BasicHeaderView.swift in Sources */,
 				FFEEBA3C2BB9126C00FCBBE4 /* ToDoListItemView.swift in Sources */,
 				FFEEBA3A2BB9126C00FCBBE4 /* ProfileView.swift in Sources */,
 				FFEEBA342BB9126C00FCBBE4 /* ToDoListItem.swift in Sources */,
