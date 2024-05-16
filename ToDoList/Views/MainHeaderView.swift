@@ -7,7 +7,7 @@
 import SwiftUI // Import the SwiftUI framework for UI elements.
 
 // Define a struct named HeaderView that conforms to the View protocol.
-struct HeaderView: View {
+struct MainHeaderView: View {
     let title: String // Constant to hold the title text.
     let subtitle: String // Constant to hold the subtitle text.
     let angle: Double // Constant to hold the rotation angle.
@@ -44,5 +44,5 @@ struct HeaderView: View {
 
 // Preview provider for the HeaderView.
 #Preview {
-    HeaderView(title: "Title", subtitle: "Subtitle", angle: 15, foreground: .blue)
+    MainHeaderView(title: "Title", subtitle: "Subtitle", angle: 15, foreground: .blue)
 }
